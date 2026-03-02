@@ -1,23 +1,17 @@
-// 1. Grab elements from HTML
-const toggleBtn = document.getElementById("toggleBtn");
-const goalsList = document.getElementById("goalsList");
+// Three-bar navigation toggle
+const navToggle = document.getElementById("navToggle");
+const mainNav = document.getElementById("mainNav");
 
-// 2. Keep track of whether goals are visible
-let isVisible = false;
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", function () {
+    const isOpen = mainNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+  });
 
-// 3. Tell the browser: when the button is clicked, run this function
-toggleBtn.addEventListener("click", function () {
-
-  // 4. If goals are currently hidden, show them
-  if (isVisible === false) {
-    goalsList.classList.remove("hidden");   // show the list
-    toggleBtn.textContent = "Hide My Goals"; // change button text
-    isVisible = true;                       // update state
-  } 
-  // 5. Otherwise, hide them
-  else {
-    goalsList.classList.add("hidden");      // hide the list
-    toggleBtn.textContent = "Show My Goals"; // change button text
-    isVisible = false;                      // update state
-  }
-});
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}

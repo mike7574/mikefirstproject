@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Learning</title>
-  <link rel="stylesheet" href="style.css"></head>
-   <body>
+  <title>Web Learning | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with three-bar navigation -->
+  <header class="site-header">
+    <a href="#" class="logo">Portfolio</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav class="nav" id="mainNav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <!-- Hero Section -->
     <section class="hero">
       <div class="overlay">
@@ -25,28 +44,40 @@
 
     <!-- Goals Section -->
     <section id="goals" class="section">
-      <div class="card">
-        <h2>My Goals</h2>
-        <button id="toggleBtn">Show My Goals</button>
-        <ul id="goalsList" class="hidden">
-          <li>Learn HTML</li>
-          <li>Learn CSS</li>
-          <li>Learn JavaScript</li>
-        </ul>
+      <div class="cards">
+        <div class="card">
+          <h2>My Goals</h2>
+          <ul id="goalsList">
+            <li>Learn HTML</li>
+            <li>Learn CSS</li>
+            <li>Learn JavaScript</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>My Projects</h2>
+          <ul>
+            <li>Management systems for Schools, Library, Hospitals</li>
+            <li>E-commerce Platform</li>
+            <li>Web based Portals</li>
+            <li>Designing Graphics</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section">
       <h2>Contact Me</h2>
-      <p>Email: mike@example.com</p>
+      <p>Email: bosiremike87@gmail.com <br>
+      phone: +254791318109</p>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2026 Mike. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Mike. All rights reserved.</p>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
